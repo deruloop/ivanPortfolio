@@ -1,8 +1,10 @@
 <div class="gallery-list">
-  <h1>Gallery</h1>
   <div *ngFor="let item of galleryItems" class="gallery-item">
-    <h2>{{ item.title }}</h2>
-    <p>{{ item.description }}</p>
-    <a [routerLink]="['detail', item.id]">View Details</a>
+    <a [routerLink]="['detail', item.id]"><img [src]="item.imageUrl" alt="{{ item.title }}" />
+    <div class="overlay">
+      <div class="title">{{ item.title }}</div>
+      <div class="date">{{ item.date }}</div>
+    </div>
+  </a>
   </div>
 </div>

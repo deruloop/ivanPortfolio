@@ -1,0 +1,97 @@
+/* Grid container for the gallery */
+.gallery-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 items per row */
+  gap: 20px; /* Space between grid items */
+  // padding: 20px; /* Optional padding around the gallery */
+  // width: 60%;
+}
+
+/* Individual gallery items */
+.gallery-item {
+  position: relative;
+  display: flex;
+  // width: clamp(160px, 20vw, 328px); /* Larghezza dinamica */
+  // height: clamp(230px, 20vw, 464px);; /* Mantiene il rapporto d'aspetto */
+  // max-width: 328px; /* Adjust as needed */
+  // max-height: 464px; /* Adjust as needed */
+  // flex-direction: column;
+  overflow: hidden; /* Ensures content doesn’t overflow the box */
+  background-color: #fff; /* Optional background color */
+  text-align: center; /* Center-align text */
+}
+
+/* Image styling */
+.gallery-item img {
+  width: 100%; /* Make the image fill the box */
+  height: 100%; /* Maintain the aspect ratio */
+  object-fit: cover; /* Ensures the image scales without distortion */
+}
+
+/* Responsive text styling */
+.gallery-item h2 {
+  font-size: 18px;
+  margin: 10px 0 5px; /* Space around the title */
+}
+
+.gallery-item p {
+  font-size: 14px;
+  margin: 0 0 10px; /* Space under the description */
+}
+
+@media (max-width: 1024px) {
+  .gallery-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-list {
+    // grid-template-columns: repeat(1, 1fr); /* 1 item per row on small screens */
+    // width: 100%;
+  }
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.8); /* Blue transparent background */
+  color: white; /* Text color */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+  z-index: 1; /* Ensures the overlay is above the image */
+}
+
+.gallery-item a:hover{
+  font-style: normal;
+}
+
+/* Show overlay on hover */
+.gallery-item:hover .overlay {
+  opacity: 1; /* Fully visible */
+}
+
+/* Title in the bottom-left corner */
+.overlay .title {
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px; /* Position near the bottom */
+  left: 10px; /* Align to the left */
+}
+
+/* Date in the top-right corner */
+.overlay .date {
+  font-size: 14px;
+  font-style: italic;
+  position: absolute;
+  top: 10px; /* Position near the top */
+  right: 10px; /* Align to the right */
+}
