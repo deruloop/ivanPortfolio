@@ -1,7 +1,7 @@
 /* Contenitore principale */
-.home-container {
+// .home-container {
     // padding: 20px;
-}
+// }
 
 /* Contenitore per immagine, titolo e componente */
 .content {
@@ -11,36 +11,46 @@
     /* Allinea tutti gli elementi su una riga */
     align-items: flex-start;
     /* Centra verticalmente */
-    gap: 30px; /* Spaziatura tra header e gallery-list */
+    gap: 30px;
+    /* Spaziatura tra header e gallery-list */
 }
 
 /* Header contenente immagine e titolo */
 .header {
-    display: flex;/* Allinea immagine e titolo su una riga */
-    align-items: last baseline;
-    gap: 110px;/* Spaziatura tra immagine e titolo */
+    display: flex;
+    /* Allinea immagine e titolo su una riga */
+    // align-items: last baseline;
+    gap: 110px;
+    /* Spaziatura tra immagine e titolo */
 }
 
 /* Stile per l'immagine */
 .arrow {
     height: 3vw;
-    vertical-align: baseline; /* Allinea l'immagine alla baseline del testo */
+    vertical-align: baseline;
+    padding-top: 9vw;
 }
 
 /* Stile per il titolo */
 .title {
-    font-size: 8vw; /* Adjust the range to fit your requirements */
+    font-size: 8vw;
+    /* Adjust the range to fit your requirements */
     font-weight: bold;
     min-width: 0;
-    margin: 0;/* Rimuove margini predefiniti */
-    line-height: 1;/* Imposta un’altezza di linea compatibile */
+    margin: 0;
+    /* Rimuove margini predefiniti */
+    line-height: 0.8;
+    /* Imposta un’altezza di linea compatibile */
     // word-break: break-word; /* Forza la parola a spezzarsi */
     // overflow-wrap: break-word; /* Assicura compatibilità */
     // white-space: normal; /* Permette il ritorno a capo */
-    max-width: 100%; /* Impedisce che il titolo ecceda i bordi */
-    flex-shrink: 1; /* Permette al titolo di ridimensionarsi */
+    max-width: 100%;
+    /* Impedisce che il titolo ecceda i bordi */
+    flex-shrink: 1;
+    /* Permette al titolo di ridimensionarsi */
     text-align: right;
-    overflow: hidden; /* Ensures no overflow */
+    overflow: hidden;
+    /* Ensures no overflow */
     // display: -webkit-box; /* Required for line-clamp */
     // -webkit-line-clamp: 2; /* Maximum 2 lines */
     // -webkit-box-orient: vertical; /* Required for line-clamp */
@@ -55,14 +65,41 @@
     }
 
     .title {
-        font-size: 16vw; /* Adjust the range to fit your requirements */
+        font-size: 16vw;
+        /* Adjust the range to fit your requirements */
         text-align: left;
     }
 
     .arrow {
         height: 6vw;
+        margin-left: -8vw;
+        padding-top: 18vw;
     }
-  }
+}
+
+@media (max-width: 720px) {
+    .header {
+        width: 100%;
+    }
+
+    .arrow {
+        height: 5vw;
+        margin-left: -8vw;
+        padding-top: 19vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        width: 100%;
+        gap: 5px;
+    }
+
+    .arrow {
+        height: 5vw;
+        margin-left: -7vw;
+    }
+}
 
 /* Stile per il componente */
 app-gallery-list {

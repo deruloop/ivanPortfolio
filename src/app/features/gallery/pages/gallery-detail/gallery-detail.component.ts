@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CardSliderComponent } from '../../components/card-slider/card-slider.component';
 
 @Component({
   selector: 'app-gallery-detail-page',
   standalone: true,
-  imports: [CardSliderComponent],
+  imports: [RouterModule],
   templateUrl: './gallery-detail.component.html',
   styleUrls: ['./gallery-detail.component.scss']
 })

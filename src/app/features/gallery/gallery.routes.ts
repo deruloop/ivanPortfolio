@@ -7,7 +7,7 @@ export const GalleryRoutes: Routes = [
   {
     path: 'detail',
     children: [
-      { path: ':id', component: GalleryDetailPageComponent }
+      { path: ':description', component: GalleryDetailPageComponent }
     ]
   }
 ];
