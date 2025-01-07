@@ -7,6 +7,15 @@ body {
     margin: 0 100px 100px 100px;
 }
 
+html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+body.no-scroll {
+    overflow: hidden; /* Disables scrolling */
+}
+
 a {
     appearance: none;
     -webkit-appearance: none;
