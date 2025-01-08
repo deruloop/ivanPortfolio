@@ -43,8 +43,16 @@ span {
 .arrow {
     height: 3vw;
     width: 3vw;
-    vertical-align: baseline;
     padding-top: 9vw;
+    background-image: url('../../../shared/vector2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    // transition: background-image 0.3s ease;
+}
+
+.arrow:hover {
+    background-image: url('../../../shared/vector2variant.png');
 }
 
 .description {
@@ -78,6 +86,33 @@ span {
 .right-content img {
     width: 100%;
 }
+
+
+
+.bottom-image {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 200px;
+}
+
+.bottom-image img {
+    width: 60%;
+}
+
+.bottom-image-text {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-image-text img {
+    width: 100%;
+}
+
+.description_bottom {}
+
+.description_bottom span {}
 
 @media (max-width: 1024px) {
     .content {

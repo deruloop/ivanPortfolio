@@ -26,8 +26,16 @@ span {
 .arrow {
     height: 3vw;
     width: 3vw;
-    vertical-align: baseline;
     padding-top: 9vw;
+    background-image: url('../../../shared/vector2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    // transition: background-image 0.3s ease;
+}
+
+.arrow:hover {
+    background-image: url('../../../shared/vector2variant.png');
 }
 
 .description {

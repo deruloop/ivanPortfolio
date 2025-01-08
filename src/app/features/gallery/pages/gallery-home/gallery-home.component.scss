@@ -8,20 +8,17 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    /* Allinea tutti gli elementi su una riga */
     align-items: flex-start;
-    /* Centra verticalmente */
-    gap: 30px;
-    /* Spaziatura tra header e gallery-list */
+    gap: 15px;
 }
 
 /* Header contenente immagine e titolo */
 .header {
     display: flex;
-    /* Allinea immagine e titolo su una riga */
-    // align-items: last baseline;
-    gap: 110px;
-    /* Spaziatura tra immagine e titolo */
+    // gap: 110px;
+    justify-content: space-between;
+    width: 40%;
+    padding-right: 20px;
 }
 
 /* Stile per l'immagine */
@@ -34,32 +31,23 @@
 /* Stile per il titolo */
 .title {
     font-size: 8vw;
-    /* Adjust the range to fit your requirements */
     font-weight: bold;
-    min-width: 0;
     margin: 0;
-    /* Rimuove margini predefiniti */
     line-height: 0.8;
-    /* Imposta un’altezza di linea compatibile */
-    // word-break: break-word; /* Forza la parola a spezzarsi */
-    // overflow-wrap: break-word; /* Assicura compatibilità */
-    // white-space: normal; /* Permette il ritorno a capo */
-    max-width: 100%;
-    /* Impedisce che il titolo ecceda i bordi */
     flex-shrink: 1;
-    /* Permette al titolo di ridimensionarsi */
     text-align: right;
-    overflow: hidden;
-    /* Ensures no overflow */
-    // display: -webkit-box; /* Required for line-clamp */
-    // -webkit-line-clamp: 2; /* Maximum 2 lines */
-    // -webkit-box-orient: vertical; /* Required for line-clamp */
-    // text-overflow: ellipsis; /* Adds "..." if text is truncated */
+    padding-right: 15px;
 }
 
+.title:hover {
+    color: #0000FF;
+    font-weight: normal;
+    font-style: italic;
+}
 
 @media (max-width: 1024px) {
     .header {
+        justify-content: start;
         width: 100%;
         gap: 11px;
     }
