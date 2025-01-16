@@ -11,19 +11,22 @@
             </h1>
         </div>
         <div class="right-content">
-            <form name="contact" netlify action="/thank-you">
-                <p>
-                    <label>Name <input type="text" name="name" /></label>
-                </p>
-                <p>
-                    <label>Email <input type="email" name="email" required /></label>
-                </p>
-                <p>
-                    <label>Messaggio <input type="message" name="message" required /></label>
-                </p>
-                <p>
-                    <button type="submit">Send</button>
-                </p>
+            <form name="contact" method="POST" data-netlify="true">
+                <!-- Hidden input required by Netlify -->
+                <input type="hidden" name="form-name" value="contact" />
+
+                <!-- Form fields -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <!-- Submit button -->
+                <button type="submit">Send</button>
             </form>
         </div>
     </div>
